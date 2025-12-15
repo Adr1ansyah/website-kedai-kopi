@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopi Senja</title>
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/628xxxxxxxxxx"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12.04 2.003c-5.506 0-9.987 4.48-9.987 9.987 0 1.762.462 3.472 1.34 4.98L2 22l5.2-1.366a9.937 9.937 0 0 0 4.84 1.23h.004c5.505 0 9.986-4.48 9.986-9.987 0-2.67-1.04-5.18-2.93-7.07a9.93 9.93 0 0 0-7.056-2.804zm5.86 14.498c-.246.69-1.41 1.314-2.01 1.41-.57.092-1.3.13-2.1-.13-.49-.16-1.12-.36-1.93-.72-3.39-1.46-5.6-4.83-5.77-5.06-.17-.23-1.38-1.84-1.38-3.51 0-1.67.87-2.5 1.18-2.84.31-.34.68-.42.9-.42.23 0 .46 0 .66.01.21.01.49-.08.77.59.28.67.95 2.32 1.04 2.49.09.17.14.36.03.59-.11.23-.16.36-.31.56-.15.2-.32.44-.46.59-.15.15-.31.31-.13.62.17.31.76 1.25 1.63 2.03 1.12.99 2.06 1.3 2.36 1.45.31.15.49.13.67-.08.18-.21.77-.9.98-1.21.21-.31.42-.26.71-.15.29.1 1.83.86 2.14 1.02.31.15.52.23.6.36.08.13.08.77-.17 1.46z"
+        />
+      </svg>
+      <span class="hidden sm:block text-sm font-medium">Chat WhatsApp</span>
+    </a>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-14">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2 font-semibold text-lg">
+            ☕ <span>Kopi Senja</span>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6 text-sm">
+            <a href="#beranda" class="hover:text-gray-300">Beranda</a>
+            <a href="#menu" class="hover:text-gray-300">Menu</a>
+            <a href="#tentang" class="hover:text-gray-300">Tentang</a>
+            <a href="#lokasi" class="hover:text-gray-300">Lokasi</a>
+          </div>
+
+          <!-- Hamburger Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-900 border-t border-gray-700"
+      >
+        <div class="px-4 py-5 space-y-2 text-sm">
+          <a href="#beranda" class="block py-2 hover:bg-gray-800 rounded"
+            >Beranda</a
+          >
+          <a href="#menu" class="block py-2 hover:bg-gray-800 rounded">Menu</a>
+          <a href="#tentang" class="block py-2 hover:bg-gray-800 rounded"
+            >Tentang</a
+          >
+          <a href="#lokasi" class="block py-2 hover:bg-gray-800 rounded"
+            >Lokasi</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO FULL SCREEN -->
+    <section
+      id="beranda"
+      class="relative min-h-screen w-full bg-cover bg-center"
+      style="background-image: url('assets/img/kedai.jpg')"
+    >
+      <!-- Overlay (atur gelap di sini) -->
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <!-- ganti opacity-60 → 40 / 50 / 70 sesuai selera -->
+
+      <!-- Content -->
+      <div
+        class="relative z-10 min-h-screen max-w-7xl mx-auto px-4 flex flex-col justify-center items-center text-center gap-6"
+      >
+        <!-- Headline -->
+        <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+          Nikmati Kopi Terbaik
+          <br class="hidden md:block" />
+          di Waktu Senja
+        </h1>
+
+        <!-- Deskripsi -->
+        <p class="text-gray-200 max-w-md">
+          Tempat nongkrong nyaman dengan kopi pilihan dan suasana hangat untuk
+          masyarakat dan mahasiswa.
+        </p>
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a
+            href="#menu"
+            class="bg-green-600 text-gray-200 px-6 py-3 rounded-lg text-sm font-medium text-center hover:bg-green-500 transition"
+          >
+            Lihat Menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+            Menu Unggulan
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Pilihan kopi favorit yang paling sering dipesan
+          </p>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card -->
+          <div class="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
+            <!-- Image Wrapper (RASIO DIKUNCI) -->
+            <div class="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src="assets/img/Espresso.jpg"
+                alt="Espresso"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900">Espresso</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                Kopi hitam pekat dengan rasa kuat dan aroma khas.
+              </p>
+              <p class="mt-3 font-semibold text-gray-900">Rp 18.000</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
+            <div class="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src="assets/img/Cappuccino.jpg"
+                alt="Cappuccino"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900">Cappuccino</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                Perpaduan espresso, susu, dan foam lembut.
+              </p>
+              <p class="mt-3 font-semibold text-gray-900">Rp 22.000</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
+            <div class="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src="assets/img/Kopi-Senja-Latte.jpg"
+                alt="Kopi Senja Latte"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900">Kopi Senja Latte</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                Latte spesial dengan rasa manis dan creamy.
+              </p>
+              <p class="mt-3 font-semibold text-gray-900">Rp 25.000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-10">
+          <a
+            href="#lokasi"
+            class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition"
+          >
+            Lihat Menu Lengkap
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG SECTION -->
+    <section id="tentang" class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Image -->
+          <div>
+            <img
+              src="assets/img/tentang-kedai.jpg"
+              alt="Tentang Kopi Senja"
+              class="w-full h-64 md:h-80 object-cover rounded-xl"
+            />
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+              Tentang Kopi Senja
+            </h2>
+
+            <p class="text-gray-600 mt-4">
+              Kopi Senja hadir sebagai tempat nongkrong yang nyaman dengan
+              suasana hangat dan kopi berkualitas. Kami ingin menjadi ruang
+              singgah untuk masyarakat dan mahasiswa melepas penat di waktu
+              senja.
+            </p>
+
+            <p class="text-gray-600 mt-3">
+              Dengan biji kopi pilihan dan barista berpengalaman, setiap cangkir
+              kami sajikan dengan sepenuh hati.
+            </p>
+
+            <a
+              href="#lokasi"
+              class="inline-block mt-6 bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition"
+            >
+              Kunjungi Kedai
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOKASI SECTION -->
+    <section id="lokasi" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+            Lokasi Kedai
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Mudah dijangkau dan nyaman untuk dikunjungi
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Map -->
+          <div class="w-full h-64 md:h-80 rounded-xl overflow-hidden">
+            <iframe
+              class="w-full h-full border-0"
+              src="https://www.google.com/maps?q=Jakarta&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+
+          <!-- Alamat -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Kopi Senja</h3>
+
+            <p class="text-gray-600 mt-2">
+              Jl. Contoh Alamat No. 12, Kecamatan Contoh, Kota Contoh
+            </p>
+
+            <p class="text-gray-600 mt-1">
+              Buka setiap hari: <br />
+              <span class="font-medium">10.00 – 22.00 WIB</span>
+            </p>
+
+            <!-- Button -->
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              class="inline-block mt-6 bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition"
+            >
+              Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+        <p class="font-semibold text-white">Kopi Senja</p>
+
+        <p class="mt-1">Tempat nongkrong nyaman di waktu senja ☕</p>
+
+        <p class="mt-3 text-gray-400">
+          © 2025 Kopi Senja. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- Script -->
+<script src="js/script.js"></script>
